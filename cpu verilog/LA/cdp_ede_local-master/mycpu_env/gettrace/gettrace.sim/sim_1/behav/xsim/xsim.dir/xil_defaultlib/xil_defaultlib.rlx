@@ -1,0 +1,10 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/L1510/Desktop/LA9/LA/cdp_ede_local-master/mycpu_env/gettrace/gettrace.sim/sim_1/behav/xsim/glbl.v,1697210494,verilog,,,,glbl,,,,,,,,
+C:/Users/L1510/Desktop/LA9/LA/cdp_ede_local-master/mycpu_env/gettrace/src/BRIDGE/bridge_1x2.v,1728436966,verilog,,C:/Users/L1510/Desktop/LA9/LA/cdp_ede_local-master/mycpu_env/gettrace/src/CONFREG/confreg.v,,bridge_1x2,,,,,,,,
+C:/Users/L1510/Desktop/LA9/LA/cdp_ede_local-master/mycpu_env/gettrace/src/CONFREG/confreg.v,1728436966,verilog,,C:/Users/L1510/Desktop/LA9/LA/cdp_ede_local-master/mycpu_env/gettrace/src/soc_lite_top.v,,confreg,,,,,,,,
+C:/Users/L1510/Desktop/LA9/LA/cdp_ede_local-master/mycpu_env/gettrace/src/myCPU/SimpleLACoreWrapRAM.v,1728436966,verilog,,C:/Users/L1510/Desktop/LA9/LA/cdp_ede_local-master/mycpu_env/gettrace/src/BRIDGE/bridge_1x2.v,,SimpleLACore;SimpleLACoreWrapRAM,,,,,,,,
+C:/Users/L1510/Desktop/LA9/LA/cdp_ede_local-master/mycpu_env/gettrace/src/soc_lite_top.v,1728436966,verilog,,C:/Users/L1510/Desktop/LA9/LA/cdp_ede_local-master/mycpu_env/gettrace/src/tb_top.v,,soc_lite_top,,,,,,,,
+C:/Users/L1510/Desktop/LA9/LA/cdp_ede_local-master/mycpu_env/gettrace/src/tb_top.v,1728436968,verilog,,,,tb_top,,,,,,,,

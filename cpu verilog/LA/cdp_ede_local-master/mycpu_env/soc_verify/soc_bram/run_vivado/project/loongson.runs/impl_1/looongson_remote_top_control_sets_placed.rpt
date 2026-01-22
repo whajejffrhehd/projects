@@ -1,0 +1,122 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Nov 28 18:45:51 2024
+| Host         : user running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file looongson_remote_top_control_sets_placed.rpt
+| Design       : looongson_remote_top
+| Device       : xc7a200t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    44 |
+|    Minimum number of control sets                        |    44 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    81 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    44 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    37 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             148 |           52 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             198 |           77 |
+| Yes          | No                    | No                     |             751 |          266 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             854 |          391 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------+--------------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
+|             Clock Signal             |                         Enable Signal                        |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------+--------------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/ena                       |                                                       |                3 |              4 |         1.33 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_wbReg/ws_valid_reg_0[0]                      |                                                       |                2 |              4 |         2.00 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/div_en                    | soc_lite/cpu/my_exeReg/u_alu/u_div/counter[5]_i_1_n_0 |                2 |              6 |         3.00 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/cr0[31]_i_2_0[0]          | soc_lite/u_confreg/SR[0]                              |                4 |              8 |         2.00 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   |                                                              | soc_lite/u_confreg/SR[0]                              |                8 |             10 |         1.25 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_wbReg/ws_csr_zip_reg[0]_9[0]                 | soc_lite/u_confreg/SR[0]                              |                8 |             12 |         1.50 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_idReg/cpu_resetn_reg_rep__0                  |                                                       |                7 |             13 |         1.86 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_wbReg/ws_csr_zip_reg[0]_6[0]                 |                                                       |               13 |             26 |         2.00 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/u_csr/timer_cnt[31]_i_1_n_0                     | soc_lite/u_confreg/SR[0]                              |               12 |             30 |         2.50 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_wbReg/ws_csr_zip_reg[0]_8[0]                 |                                                       |               12 |             31 |         2.58 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/cpu_resetn_reg[0]         |                                                       |                7 |             32 |         4.57 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/cr6[31]_i_2_0[0]          | soc_lite/u_confreg/SR[0]                              |               17 |             32 |         1.88 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/cr0[31]_i_3_0[0]          | soc_lite/u_confreg/SR[0]                              |               13 |             32 |         2.46 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/cr4[31]_i_2_0[0]          | soc_lite/u_confreg/SR[0]                              |               17 |             32 |         1.88 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/cr5[31]_i_2_0[0]          | soc_lite/u_confreg/SR[0]                              |               17 |             32 |         1.88 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/cr3[31]_i_2[0]            | soc_lite/u_confreg/SR[0]                              |               17 |             32 |         1.88 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/cr2[31]_i_2[0]            | soc_lite/u_confreg/SR[0]                              |               14 |             32 |         2.29 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/cr7[31]_i_2_0[0]          | soc_lite/u_confreg/SR[0]                              |               16 |             32 |         2.00 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/led_data[31]_i_2_0[0]     | soc_lite/u_confreg/SR[0]                              |               18 |             32 |         1.78 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/led_rg0_data[31]_i_2_0[0] | soc_lite/u_confreg/SR[0]                              |               14 |             32 |         2.29 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/led_rg1_data[31]_i_2_0[0] | soc_lite/u_confreg/SR[0]                              |               14 |             32 |         2.29 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/es_valid_reg_3[0]         | soc_lite/u_confreg/SR[0]                              |               16 |             32 |         2.00 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/io_simu[31]_i_2[0]        | soc_lite/u_confreg/SR[0]                              |               11 |             32 |         2.91 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/num_data[31]_i_2_0[0]     | soc_lite/u_confreg/SR[0]                              |               14 |             32 |         2.29 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_wbReg/ws_csr_zip_reg[0]_2[0]                 |                                                       |               19 |             32 |         1.68 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_wbReg/ws_csr_zip_reg[0]_3[0]                 |                                                       |               21 |             32 |         1.52 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_wbReg/ws_csr_zip_reg[0]_4[0]                 |                                                       |               15 |             32 |         2.13 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_wbReg/ws_csr_zip_reg[0]_5[0]                 |                                                       |               18 |             32 |         1.78 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_wbReg/ws_csr_zip_reg[0]_7[0]                 | soc_lite/u_confreg/SR[0]                              |               21 |             32 |         1.52 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_wbReg/ws_valid_reg_2[0]                      |                                                       |               12 |             32 |         2.67 |
+|  soc_lite/pll.clk_pll/inst/timer_clk |                                                              | soc_lite/u_confreg/SR[0]                              |                8 |             32 |         4.00 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_wbReg/ws_valid_reg_1[0]                      |                                                       |               14 |             32 |         2.29 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/cr1[31]_i_2_0[0]          | soc_lite/u_confreg/SR[0]                              |               15 |             32 |         2.13 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/r_r[32]_inv_i_1_n_0       |                                                       |               21 |             33 |         1.57 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_idReg/ds_valid_reg_0[0]                      | soc_lite/u_confreg/SR[0]                              |               16 |             33 |         2.06 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/y_pad[31]_i_1_n_0         | soc_lite/cpu/my_wbReg/ws_except_zip_reg[0]_0          |               29 |             64 |         2.21 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_ifReg/ds_inst                                |                                                       |               15 |             65 |         4.33 |
+|  soc_lite/pll.clk_pll/inst/timer_clk |                                                              |                                                       |               17 |             67 |         3.94 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   |                                                              |                                                       |               35 |             81 |         2.31 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_wbReg/ws_rf_zip[37]                          |                                                       |               11 |             88 |         8.00 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   |                                                              | soc_lite/cpu/my_wbReg/ws_except_zip_reg[0]_0          |               61 |            156 |         2.56 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_exeReg/u_alu/u_div/E[0]                      |                                                       |               44 |            162 |         3.68 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_memReg/ms_valid_reg_1[0]                     |                                                       |               43 |            189 |         4.40 |
+|  soc_lite/pll.clk_pll/inst/cpu_clk   | soc_lite/cpu/my_idReg/es_except_zip_tmp0                     | soc_lite/u_confreg/SR[0]                              |               86 |            221 |         2.57 |
++--------------------------------------+--------------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
+
+
